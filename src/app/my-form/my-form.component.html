@@ -1,0 +1,70 @@
+<form class="frm" [formGroup]="angForm" (ngSubmit)="onSubmit(angForm)">
+
+  <div class="addcont"> <div> <h3 class="addprd" *ngIf="isMgs">Plese Add The Product Details</h3> </div>
+  </div>
+
+  <div class="contedit">
+    <div> <h3 class="edits" *ngIf="isEdit">Plese Update The Form Details</h3> </div>
+  </div>
+
+  <div class="container">
+    <div> <button class="btncan" mat-button matDialogClose="true">Close</button> </div>
+  </div>
+
+  <label class=""> Product ID: 
+    <input
+      class="nam"
+      formControlName="id"
+      type="text"
+      placeholder="id"
+      name="id" />
+    <div style="color: red"  *ngIf=" angForm.controls['id'].invalid && (angForm.controls['id'].dirty || angForm.controls['id'].touched) " >
+    <div *ngIf="angForm.controls['id'].errors.required">ID is Required</div>
+    </div>
+  </label>
+
+
+  <label class="">Name:
+    <input
+      class="nam"
+      formControlName="name"
+      type="text"
+      placeholder="name"
+      name="name"/>
+    <div style="color: red" *ngIf=" angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched) ">
+    <div *ngIf="angForm.controls['name'].errors.required">Name is Required</div>
+    </div>
+  </label>
+
+  
+  <label class=""> Description:
+      <input
+      class="nam"
+      formControlName="description"
+      type="text"
+      placeholder="description"
+      name="description" />
+    <div style="color: red" *ngIf=" angForm.controls['description'].invalid && (angForm.controls['description'].dirty || angForm.controls['description'].touched) ">
+    <div *ngIf="angForm.controls['description'].errors.required"> Description is Required </div>
+    </div>
+  </label>
+
+
+  <label class=""> Price: 
+      <input
+      class="nam"
+      formControlName="price"
+      type="text"
+      placeholder="Price"
+      name="Price" />
+    <div style="color: red" *ngIf=" angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched) ">
+    <div *ngIf="angForm.controls['price'].errors.required"> Price is Required </div>
+    </div>
+  </label>
+
+
+  <button class="adding"    *ngIf="isAdd"  mat-button mat-dialog-close="true"  type="submit"  [disabled]="angForm.controls['id'].invalid" [disabled]="angForm.controls['name'].invalid" [disabled]="angForm.controls['description'].invalid"[disabled]="angForm.controls['price'].invalid">  ADD </button>
+  <button class="updateing" *ngIf="!isAdd" mat-button mat-dialog-close="true"  type="reset"  > Update </button> 
+  <button class="Reset"     *ngIf="!isAdd" mat-button (click)="resetProduct()" type="reset" > Reset </button>
+</form>
+

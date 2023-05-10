@@ -1,0 +1,42 @@
+{
+        "product":[{
+            "id": 1 ,
+            "title" :"Car",
+            "price": 300000,
+            "descr": "on sale",
+            "cetog": "Race",
+            "rate" : 9,
+            "count": 100
+
+    },
+    
+        {
+            "id": 1 ,
+            "title" :"Battry",
+             "price": 300000,
+             "descr": "on sale",
+             "cetog": "Race",
+             "rate" : 9,
+             "count": 100
+    
+        },{
+            "id": 1 ,
+            "title" :"BMW",
+             "price": 300000,
+             "descr": "on sale",
+             "cetog": "Race",
+             "rate" : 9,
+             "count": 100
+    
+        },{
+            "id": 1 ,
+            "title" :"Jaguar",
+             "price": 300000,
+             "descr": "on sale",
+             "cetog": "Race",
+             "rate" : 9,
+             "count": 100
+    
+                 }   
+            ]
+        }

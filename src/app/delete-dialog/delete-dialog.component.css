@@ -1,0 +1,11 @@
+.btnpry {
+  background-color: rgb(213, 213, 245);
+  font-size: large;
+  color: blue;
+}
+
+.btndel {
+  background-color: rgb(245, 213, 213);
+  font-size: large;
+  color: rgb(255, 0, 8);
+}

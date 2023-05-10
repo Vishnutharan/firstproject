@@ -1,0 +1,113 @@
+.nam {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(122, 184, 93);
+  border-collapse: collapse;
+  /* margin: 25px 0; */
+  font-size: 0.9em;
+  font-family: sans-serif;
+  /* min-width: 400px; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.des {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(122, 184, 93);
+  border-collapse: collapse;
+  /* margin: 25px 0; */
+  font-size: 0.9em;
+  font-family: sans-serif;
+  /* min-width: 400px; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.pri {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(122, 184, 93);
+  border-collapse: collapse;
+  /* margin: 25px 0; */
+  font-size: 0.9em;
+  font-family: sans-serif;
+  /* min-width: 400px; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.addcont {
+  height: auto;
+  position: relative;
+}
+.btncan {
+  color: rgb(4, 0, 2);
+  background-color: rgb(57, 157, 204);
+}
+
+.addprd {
+  text-align: center;
+  text-shadow: #009879;
+  color: aquamarine;
+  background-color: cadetblue;
+}
+
+.contedit {
+  height: auto;
+  position: relative;
+}
+.edits {
+  text-align: center;
+  text-shadow: #009879;
+  color: aquamarine;
+  background-color: cadetblue;
+}
+.contedit {
+  height: auto;
+  position: relative;
+}
+
+.adding {
+  background-color: rgb(130, 60, 229);
+  border-radius: 0%;
+  color: rgb(7, 3, 1);
+}
+.updateing {
+  background-color: rgb(31, 155, 232);
+  border-radius: 0%;
+  color: rgb(17, 5, 1);
+}
+
+.Reset{
+  background-color:brown;
+  color: black;
+  border-radius: 0%;
+  word-spacing: normal;
+  padding:right 75px;;
+  
+}
+.frm{
+  align-items: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  box-sizing: border-box;
+
+
+}

@@ -1,0 +1,139 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.titleContainer {
+  display: flex;
+  height: 30px;
+  line-height: 32px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: aquamarine;
+  color: black;
+  padding-left: 30px;
+}
+.hed {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: aqua;
+  font-size: xx-large;
+}
+
+.idTitle {
+  flex: 1;
+  /* background:red; */
+}
+
+.nameTitle {
+  flex: 1;
+  /* background:green; */
+}
+
+.descriptionTitle {
+  flex: 1;
+  /* background:blue; */
+}
+
+.priceTitle {
+  flex: 1;
+  /* background:orange; */
+}
+
+.buttonTitle {
+  flex: 1;
+  /* background:lightblue; */
+}
+
+.id {
+  flex: 1;
+  /* background:yellow; */
+}
+.hed{
+  flex: 1;
+  color: rgb(24, 18, 0);
+  background-color: rgb(144, 150, 144);
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.name {
+  flex: 1;
+  /* background:maroon; */
+}
+
+.description {
+  flex: 1;
+  /* background:lightgreen; */
+}
+
+.price {
+  flex: 1;
+  /* background:darkcyan; */
+}
+
+.button {
+  flex: 1;
+  /* background:pink; */
+}
+
+/* .addBtn {
+    background:green;
+    border:none;
+    height:32px;
+    margin-top:20px;
+    color:#ffffff;
+    font-weight:bold;
+    width:120px;
+  } */
+
+.editBtn {
+  background: blue;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  height: 30px;
+  width: 60px;
+}
+
+.add {
+  background: rgb(146, 202, 146);
+  border: none;
+  height: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  width: auto;
+}
+
+.deleteBtn {
+  background: red;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  height: 30px;
+  width: 60px;
+}
+
+.infoContainer {
+  display: flex;
+  height: 32px;
+  line-height: 32px;
+  border-bottom: 1px solid #dddddd;
+  padding-left: 10px;
+  background: #ffffff;
+}
+.red {
+  display: flex1;
+  color: rgb(235, 216, 216);
+  background-color: rgba(2, 33, 32, 0.808);
+  font-size: larger;
+  border: brown;
+  font-weight: bold;
+  height: 22px;
+  width: 60px;
+}
+.btn btn-secondary {
+  flex: 1px;
+}
+.alignmarg{
+  align-items: left;
+  align-items: flex-start;
+}

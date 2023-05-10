@@ -1,0 +1,27 @@
+<h1 class="hed">This Is Product List</h1>
+<button class="add" mat-button (click)="openDialog('Add')">Add</button>
+<div class="titleContainer">
+  <div class="idTitle">Product ID</div>
+  <div class="nameTitle">Name</div>
+  <div class="descriptionTitle">Description</div>
+  <div class="priceTitle">Price</div>
+  <div class="buttonTitle"></div>
+</div>
+
+<div
+  class="infoContainer" 
+  *ngFor=" let product of products | paginate : { itemsPerPage: 4, currentPage: page }" >
+  <div class="id">{{ product.id }}</div>
+  <div class="name">{{ product.name }}</div>
+  <div class="description">{{ product.description }}</div>
+  <div class="description">{{ product.price | currency }}</div>
+
+<div class="button">
+  <button   class="editBtn"   mat-button (click)="openDialog('Edit', product)"> Edit </button>
+    <button class="deleteBtn" mat-button (click)="DeleteDialog(product)"> Delete </button>
+  </div>
+</div>
+
+<pagination-controls class="alignmarg" (pageChange)="page = $event" ></pagination-controls>
+
+

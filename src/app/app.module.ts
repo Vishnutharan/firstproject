@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductService } from './product/product.service';
@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NameEditerComponent } from './name-editer/name-editer.component';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { HttpClientModule} from'@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PaginationComponent } from './pagination/pagination.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { HomeComponent } from './home/home.component';
@@ -53,11 +53,11 @@ import { PagenotfoundComponentComponent } from './pagenotfound-component/pagenot
     MatDialogModule,
     NgxPaginationModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
 
-  providers      : [ProductService, NgxSmartModalService],
-  bootstrap      : [AppComponent],
+  providers: [ProductService, NgxSmartModalService],
+  bootstrap: [AppComponent],
   entryComponents: [MyFormComponent, DeleteDialogComponent],
 })
 export class AppModule {}

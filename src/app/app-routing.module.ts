@@ -8,12 +8,12 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
-  { path: '',         component: HomeComponent         },
-  { path: 'home',     component: HomeComponent         },
-  { path: 'products', component: ProductComponent      },
-  { path: 'about',    component: AboutComponent        },
-  { path: 'fakeapi',  component: PaginationComponent   },
-  { path: '**',       pathMatch: 'full', component: PagenotfoundComponentComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'products', component: ProductComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'fakeapi', component: PaginationComponent },
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponentComponent },
 ];
 
 @NgModule({

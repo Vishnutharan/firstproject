@@ -1,35 +1,44 @@
-<h1 class="hed">This Is Product List</h1>
-<button class="add" mat-button (click)="openDialog('Add')">Add</button>
-<div class="titleContainer">
-  <div class="idTitle">Product ID</div>
-  <div class="nameTitle">Name</div>
-  <div class="descriptionTitle">Description</div>
-  <div class="priceTitle">Price</div>
-  <div class="buttonTitle"></div>
-</div>
+<div class="container-fluid bg-light py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-center display-4 fw-bold mb-4">This Is Product List</h1>
 
-<div
-  class="infoContainer"
-  *ngFor="
-    let product of products | paginate : { itemsPerPage: 4, currentPage: page }
-  "
->
-  <div class="id">{{ product.id }}</div>
-  <div class="name">{{ product.name }}</div>
-  <div class="description">{{ product.description }}</div>
-  <div class="description">{{ product.price | currency }}</div>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <button class="btn btn-primary me-2">Add New Product</button>
+        <div class="form-group d-flex align-items-center">
+          <input type="text" class="form-control me-2" placeholder="Search Products">
+          <button class="btn btn-outline-primary"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
 
-  <div class="button">
-    <button class="editBtn" mat-button (click)="openDialog('Edit', product)">
-      Edit
-    </button>
-    <button class="deleteBtn" mat-button (click)="DeleteDialog(product)">
-      Delete
-    </button>
+      <div class="table-responsive shadow rounded">
+        <table class="table table-hover mb-0">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Product ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: page }">
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.description | slice: 0:50 }}...</td> <td>{{ product.price | currency }}</td>
+              <td>
+                <button class="btn btn-sm btn-primary me-2" (click)="openDialog('Edit', product)">Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="DeleteDialog(product)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-center mt-4">
+        <pagination-controls class="mt-4" (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </div>
   </div>
 </div>
-
-<pagination-controls
-  class="alignmarg"
-  (pageChange)="page = $event"
-></pagination-controls>

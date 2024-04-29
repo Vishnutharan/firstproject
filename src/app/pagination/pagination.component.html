@@ -1,32 +1,47 @@
-<link rel="stylesheet" />
-<button class="btn btn-danger" (click)="getUsers()">Get Users</button>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>category</th>
-      <th>Rate</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr
-      *ngFor="
-        let user of products | paginate : { itemsPerPage: 4, currentPage: page } ">
-      <td>{{ user.id }}</td>
-      <td>{{ user.title }}</td>
-      <td>{{ user.price }}</td>
-      <td>{{ user.description }}</td>
-      <td>{{ user.category }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.rating.rate }}</td>
-      <td>{{ user.rating.count }}</td>
-    </tr>
-  </tbody>
-</table>
-<div>
-  <pagination-controls (pageChange)="page = $event"> </pagination-controls>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="container-fluid product-list-container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <button class="btn btn-primary" (click)="getUsers()">Get Users</button>
+        <div class="form-group d-flex align-items-center">
+          <input type="text" class="form-control me-2" placeholder="Search Users">
+          <button class="btn btn-outline-primary"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="table-responsive shadow rounded">
+        <table class="table table-hover mb-0">
+          <thead class="table-primary">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Price</th>
+              <th scope="col">Description</th>
+              <th scope="col">Category</th>
+              <th scope="col">Email</th>
+              <th scope="col">Rate</th>
+              <th scope="col">Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of products | paginate: { itemsPerPage: 4, currentPage: page }">
+              <td>{{ user.id }}</td>
+              <td>{{ user.title }}</td>
+              <td>{{ user.price | currency }}</td>
+              <td>{{ user.description | slice: 0:50 }}...</td> <td>{{ user.category }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.rating?.rate }}</td> <td>{{ user.rating?.count }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-center mt-4">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
 </div>
